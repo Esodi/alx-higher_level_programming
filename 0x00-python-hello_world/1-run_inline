@@ -1,6 +1,4 @@
 #!/bin/bash
-#!/usr/bin/python3
-
 tempfile=$(mktemp)
 echo "$PYCODE" > "$tempfile"
 python3 "$tempfile"
