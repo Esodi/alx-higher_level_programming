@@ -1,5 +1,2 @@
 #!/bin/bash
-tempfile=$(mktemp)
-echo "$PYCODE" > "$tempfile"
-python3 "$tempfile"
-rm "$tempfile"
+python3 "$PYCODE"
