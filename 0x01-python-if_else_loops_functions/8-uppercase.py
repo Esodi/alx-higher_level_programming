@@ -8,4 +8,4 @@ def uppercase(str):
         else:
             c.append(char)
     h = ''.join(c)
-    print(h)
+    print("{}".format(h))
