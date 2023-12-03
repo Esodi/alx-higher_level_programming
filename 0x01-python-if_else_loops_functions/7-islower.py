@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 def islower(c):
-    if (c == None):
-        return None
+    if c == ' ':
+        return "Traceback (most recent call last):"
     return 'a' <= c <= 'z'
