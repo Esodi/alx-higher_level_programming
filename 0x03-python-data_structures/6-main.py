@@ -9,4 +9,4 @@ matrix = [
 m = [[1]]
 print_matrix_integer(matrix)
 print("--")
-print_matrix_integer(m)
+print_matrix_integer()
