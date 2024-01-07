@@ -15,10 +15,10 @@ class Rectangle:
 
     @property
     def width(self):
-        return self.width
+        return self.__width
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     @width.setter
     def width(self, value):
