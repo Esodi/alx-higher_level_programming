@@ -33,10 +33,3 @@
 	TypeError: a must be an integer
 
 ::
-
-	>>> add_integer('x', 'u')
-	Traceback (most recent call last):
-	  File "<stdin>", line 1, in <module>
-	    raise TypeError("a must be an integer")
-	TypeError: a must be an integer
-::
