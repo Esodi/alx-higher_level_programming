@@ -34,9 +34,9 @@
 
 ::
 
-	>>> add_integer(1, 2, 3)
+	>>> add_integer('x', 'u')
 	Traceback (most recent call last):
 	  File "<stdin>", line 1, in <module>
-	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
-
+	    raise TypeError("a must be an integer")
+	TypeError: a must be an integer
 ::
