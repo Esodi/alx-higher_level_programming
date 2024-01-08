@@ -20,7 +20,16 @@
 	13
 
 ::
+
 	>>> add_integer(7)
 	105
+
+::
+
+	>>> add_integer('u', 8)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	    raise TypeError("a must be an integer")
+	TypeError: a must be an integer
 
 ::
