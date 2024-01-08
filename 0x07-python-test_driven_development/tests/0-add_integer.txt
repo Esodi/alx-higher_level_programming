@@ -1,6 +1,39 @@
->>> add_integer(2, 3)
-5
->>> add_integer(-1, 5)
-4
->>> add_integer(0, 0)
-0
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(2, 3)
+	5
+
+::
+
+	>>> add_integer(0, -7)
+	-7
+
+::
+
+	>>> add_integer(8.5, 9.1)
+	17
+
+::
+
+	>>> add_integer(9.5, 4)
+	13
+
+::
+	>>> add_integer(7)
+	105
+
+::
+
+	>>> add_integer('u', 9)
+	Traceback (most recent call last):
+  	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(-3, 'x')
+	Traceback (most recent call last):
+  	TypeError: a must be an integer
+
+::
+
