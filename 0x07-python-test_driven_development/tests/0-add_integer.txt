@@ -13,3 +13,38 @@
 
 	>>> add_integer(8.5, 9.1)
 	17
+
+::
+
+	>>> add_integer(9.5, 4)
+	13
+
+::
+
+	>>> add_integer(7)
+	105
+
+::
+
+	>>> add_integer('u', 8)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	    raise TypeError("a must be an integer")
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer(2, 'c')
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	    raise TypeError("a must be an integer")
+	TypeError: a must be an integer
+
+::
+
+	>>> add_integer('u', 't')
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	    raise TypeError("a must be an integer")
+	TypeError: a must be an integer
+
