@@ -1,0 +1,65 @@
+=======================
+``def text_indentation(text):``
+=======================
+
+::
+
+	>>> t = __import__('5-text_indentation').text_indentation
+	>>> t('hello?i know u.dont u?')
+	hello?
+	<BLANKLINE>
+	i know u.
+	<BLANKLINE>
+	dont u?
+	<BLANKLINE>
+
+::
+
+	>>> t('list:eggs.rice.pilau.food.and wat?')
+	list:
+	<BLANKLINE>
+	eggs.
+	<BLANKLINE>
+	rice.
+	<BLANKLINE>
+	pilau.
+	<BLANKLINE>
+	food.
+	<BLANKLINE>
+	and wat?
+	<BLANKLINE>
+
+::
+
+	>>> t(8)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	    raise TypeError("text must be a string")
+	TypeError: text must be a string
+
+::
+
+	>>> t(h)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	NameError: name 'h' is not defined
+
+::
+
+	>>> t()
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+::
+
+	>>> t('')
+
+::
+
+	>>> t(None)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	    raise TypeError("text must be a string")
+	TypeError: text must be a string
+
