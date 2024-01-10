@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 
-"""  class Square that defines a square by: (based on 3-square.py)
-
-"""
+""" module with a class square and more than the 4-square module """
 
 
 class Square:
-    """ class square that calculate the area of the square """
+    """ square class that print out the damn square using # sign"""
 
     def __init__(self, size=0):
         self.__size = size
@@ -25,3 +23,9 @@ class Square:
 
     def area(self):
         return self.__size ** 2
+
+    def my_print(self):
+        for i in range(self.__size):
+            for j in range(self.__size):
+                print('#', end='')
+            print()
