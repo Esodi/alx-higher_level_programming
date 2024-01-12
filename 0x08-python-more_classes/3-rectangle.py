@@ -6,6 +6,10 @@
 
 
 class Rectangle:
+    """
+        class with ability to print out the the rectangle with # symbol
+    """
+
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
