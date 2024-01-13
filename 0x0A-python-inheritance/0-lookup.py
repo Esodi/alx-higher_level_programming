@@ -4,4 +4,4 @@
 
 def lookup(obj):
     """ lookup function for real"""
-    return list(obj.__dict__)
+    return dir(obj)

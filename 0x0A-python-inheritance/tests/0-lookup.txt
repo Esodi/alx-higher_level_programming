@@ -5,3 +5,22 @@
 ::
 
 
+    >>> class ExampleClass:
+    ...     def __init__(self):
+    ...         self.attribute1 = 10
+    ...
+    ...     def method1(self):
+    ...         print("Method 1")
+    ...
+    >>> obj = ExampleClass()
+    >>> result = lookup(obj)
+    >>> 'attribute1' in result
+    True
+    >>> 'method1' in result
+    True
+    >>> '__init__' in result
+    True
+    >>> 'nonexistent_attribute' in result
+    False
+    >>> 'nonexistent_method' in result
+    False
