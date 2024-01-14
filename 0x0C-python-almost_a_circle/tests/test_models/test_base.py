@@ -1,9 +1,13 @@
 #!/usr/bin/python3
+"""a module with a class that test other files"""
 import os
 import unittest
 from models.base import Base
 
+
 class Test_Base(unittest.TestCase):
+    '''a class with ability to test base class code'''
+
     def test_normal(self):
         n = Base(88)
         self.assertEqual(88, n.id)
