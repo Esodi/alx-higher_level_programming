@@ -1,3 +1,8 @@
 -- showing list of tables
-USE @dbname;
-SHOW TABLES;
+SET @dbname = 'mysql';
+IF @dbname IS NULL THEN
+	SETECT 'mysql';
+ELSE
+	USE @dbname;
+	SHOW TABLES;
+END IF;
