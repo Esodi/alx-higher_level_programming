@@ -1,3 +1,2 @@
---my first sql script
--- so cool
+-- my first sql script
 SHOW DATABASES;
