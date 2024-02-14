@@ -1,2 +1,3 @@
 -- showing list of tables
-SHOW TABLES FROM mysql;
+SET @db = '%DATABASE_NAME%';
+SHOW TABLES FROM @db;
