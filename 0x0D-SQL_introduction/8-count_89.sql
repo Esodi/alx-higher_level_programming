@@ -1,2 +1,2 @@
 -- using count funct of sql
-SELECT COUNT(*) FROM user WHERE id = 89;
+SELECT COUNT(*) FROM first_table WHERE id = 89;
