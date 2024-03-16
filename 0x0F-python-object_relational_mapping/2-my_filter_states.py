@@ -11,8 +11,7 @@ def list_Name(username, password, dbname, state_name):
     ''' a function that proccesses an output'''
     db = MySQLdb.connect(host='localhost', user=username, passwd=password, port=3306, db=dbname)
     cur = db.cursor()
-    sql = "SELECT * FROM states WHERE name=state_name"
-    cur.execute(sql)
+    cur.execute("SELECT * FROM states WHERE name = %s", (state_name,))
     fetch = cur.fetchall()
     for i in fetch:
         print(f'({i[0]}, {i[1]})')
