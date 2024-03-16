@@ -15,7 +15,7 @@ def list_Name(username, password, dbname, state_name):
     cur.execute(sql)
     fetch = cur.fetchall()
     for i in fetch:
-        print(f'({i[0]}, {i[1]}')
+        print(f'({i[0]}, {i[1]})')
     cur.close()
     db.close()
 
