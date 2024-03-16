@@ -15,6 +15,8 @@ def list_states(mysql_username, mysql_password, database_name):
     states = cur.fetchall()
     for i in states:
         print('({}, {})'.format(i[0], i[1]))
+    cur.close()
+    db.close()
 
 if __name__ == '__main__':
     list_states(sys.argv[1], sys.argv[2], sys.argv[3])
