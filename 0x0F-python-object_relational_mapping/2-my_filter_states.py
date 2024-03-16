@@ -20,4 +20,4 @@ def list_Name(username, password, dbname, state_name):
     db.close()
 
 if __name__ == '__main__':
-    list_Name(sys.argv[0], sys.argv[1], sys.argv[2], sys.argv[3])
+    list_Name(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
