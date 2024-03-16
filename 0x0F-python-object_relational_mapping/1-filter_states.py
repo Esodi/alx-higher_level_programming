@@ -8,7 +8,7 @@ import sys
 import MySQLdb
 
 def list_Ns(username, password, dbname):
-    db = MySQLdb.connect(host='localhost', usr=username, passwd=password, port=3306, db=dbname)
+    db = MySQLdb.connect(host='localhost', user=username, passwd=password, port=3306, db=dbname)
     cur = db.cursor()
     sql = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id asc"
     cur.execute(sql)
