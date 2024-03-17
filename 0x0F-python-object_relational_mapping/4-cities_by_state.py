@@ -11,13 +11,10 @@ def allcities(username, password, database):
     '''function that process an output'''
     db = MySQLdb.connect(host='localhost', passwd=password, user=username, db=database)
     cur = db.cursor()
-    cur2 = db.cursor()
-    cur.execute("SELECT * FROM cities ORDER BY cities.id ASC")
-    cur2.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute("SELECT cities.id, cities.name, state.name FROM cities INNER JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC")
     fetch = cur.fetchall()
-    fetch2 = cur2.fetchall()
     for i in fetch:
-        print('({})'.format(i))
+        print('{}'.format(i))
     cur.close()
     db.close()
 
