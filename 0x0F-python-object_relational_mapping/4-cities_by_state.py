@@ -11,10 +11,14 @@ def allcities(username, password, database):
     '''function that process an output'''
     db = MySQLdb.connect(host='localhost', passwd=password, user=username, db=database)
     cur = db.cursor()
+    cur2 = db.cursor()
     cur.execute("SELECT * FROM cities ORDER BY cities.id ASC")
+    cur2.execute("SELECT * FROM states ORDER BY cities.id ASC")
     fetch = cur.fetchall()
-    for i in fetch:
-        print('({}, {}, {})'.format(i[1], i[2], i[3]))
+    fetch2 = cur2.fetchall()
+    for j in fetch2:
+        for i in fetch:
+            print('({}, {}, {})'.format(i[1], i[2], j[1]))
     cur.close()
     db.close()
 
