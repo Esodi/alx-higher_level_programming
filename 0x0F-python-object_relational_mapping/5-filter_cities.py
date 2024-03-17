@@ -14,8 +14,9 @@ def allcitiesv2(username, password, dbname, state_name):
     sql = "SELECT cities.name FROM cities INNER JOIN states ON cities.state_id = states.id WHERE states.name = %s ORDER BY cities.id ASC"
     cur.execute(sql, (state_name,))
     fetch = cur.fetchall()
-    for i in range(len(fetch) - 2):
-        print('{}, '.format(fetch[i]))
+    for i in range(len(fetch) - 1):
+        print('{}, '.format(fetch[i][0]))
+    print('{}'.format(fetch[i][0]))
     cur.close()
     db.close()
 
