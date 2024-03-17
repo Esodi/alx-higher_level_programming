@@ -19,4 +19,4 @@ def allcities(username, password, database):
     db.close()
 
 if __name__ == '__main__':
-    allcities(sys.argv[1], sys.argv[1], sys.argv[2])
+    allcities(sys.argv[1], sys.argv[2], sys.argv[3])
