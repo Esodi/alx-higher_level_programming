@@ -16,9 +16,8 @@ def allcities(username, password, database):
     cur2.execute("SELECT * FROM states ORDER BY id ASC")
     fetch = cur.fetchall()
     fetch2 = cur2.fetchall()
-    for j in fetch2:
-        for i in fetch:
-            print('({}, {}, {})'.format(i[1], i[2], j[1]))
+    for i in fetch:
+        print('({})'.format(i))
     cur.close()
     db.close()
 
