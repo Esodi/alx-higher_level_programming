@@ -13,7 +13,7 @@ def allcities(username, password, database):
     cur = db.cursor()
     cur2 = db.cursor()
     cur.execute("SELECT * FROM cities ORDER BY cities.id ASC")
-    cur2.execute("SELECT * FROM states ORDER BY cities.id ASC")
+    cur2.execute("SELECT * FROM states ORDER BY id ASC")
     fetch = cur.fetchall()
     fetch2 = cur2.fetchall()
     for j in fetch2:
