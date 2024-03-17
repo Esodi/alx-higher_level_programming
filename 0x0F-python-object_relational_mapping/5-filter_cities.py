@@ -16,8 +16,8 @@ def allcitiesv2(username, password, dbname, state_name):
     fetch = cur.fetchall()
     for i in range(len(fetch) - 1):
         print('{}, '.format(fetch[i][0]), end='')
-    i += 1
-    print('{}'.format(fetch[i][0]))
+    if len(fetch) > 0:
+        print('{}'.format(fetch[-1][0]))
     cur.close()
     db.close()
 
