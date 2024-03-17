@@ -11,7 +11,7 @@ def allcitiesv2(username, password, dbname, state_name):
     '''a function that processes an output'''
     db = MySQLdb.connect(host='localhost', user=username, port=3306, db=dbname, passwd=password)
     cur = db.cursor()
-    sql = "SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC"
+    sql = "SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON cities.state_id = states.id WHERE state.name = %s ORDER BY cities.id ASC"
     cur.execute(sql, (state_name,))
     fetch = cur.fetchall()
     for i in fetch:
