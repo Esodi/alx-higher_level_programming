@@ -9,7 +9,7 @@ import MySQLdb
 
 def allcities(username, password, database):
     '''function that process an output'''
-    db = MySQLdb.connect(host='localhost', passwd=password, user=username, db=dbname)
+    db = MySQLdb.connect(host='localhost', passwd=password, user=username, db=database)
     cur = db.cursor()
     cur.execute("SELECT * FROM cities ORDER BY cities.id ASC")
     fetch = cur.fetchall()
