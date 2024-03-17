@@ -11,7 +11,7 @@ def list_Ns(username, password, dbname):
     '''a function that process an output'''
     db = MySQLdb.connect(host='localhost', user=username, passwd=password, port=3306, db=dbname)
     cur = db.cursor()
-    sql = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id asc"
+    sql = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
     cur.execute(sql)
     fetchedNs = cur.fetchall()
     for i in fetchedNs:
