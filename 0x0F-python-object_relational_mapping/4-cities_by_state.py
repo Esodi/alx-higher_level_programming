@@ -14,7 +14,7 @@ def allcities(username, password, database):
     cur.execute("SELECT * FROM cities ORDER BY cities.id ASC")
     fetch = cur.fetchall()
     for i in fetch:
-        print('({}, {})'.format(i[1], i[2]))
+        print('({}, {})'.format(i[1], i[2], i[3]))
     cur.close()
     db.close()
 
