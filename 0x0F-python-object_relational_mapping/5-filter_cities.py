@@ -23,8 +23,8 @@ def allcitiesv2(username, password, dbname, state_name):
     "FROM cities "
     "INNER JOIN states "
     "ON cities.state_id = states.id "
-    "WHERE states.name = {} "
-    "ORDER BY cities.id ASC".format("%s")
+    "WHERE states.name = {} ".format("%s")
+    "ORDER BY cities.id ASC"
     cur.execute(sql, (state_name,))
     fetch = cur.fetchall()
     for i in range(len(fetch) - 1):
