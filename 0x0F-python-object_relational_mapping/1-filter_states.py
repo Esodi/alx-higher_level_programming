@@ -20,13 +20,13 @@ def list_Ns(username, password, dbname):
             )
     cur = db.cursor()
     sql = (
-    "SELECT *
+    """SELECT *
     FROM states
     WHERE name
     LIKE 'N%'
     COLLATE Latin1_General_CS_AS
     ORDER BY states.id
-    ASC"
+    ASC"""
     )
     cur.execute(sql)
     fetchedNs = cur.fetchall()
