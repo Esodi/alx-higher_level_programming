@@ -19,8 +19,7 @@ def list_Ns(username, password, dbname):
             db=dbname
             )
     cur = db.cursor()
-    sql = "SELECT*
-    FROM states
+    sql = "SELECT * FROM states
     WHERE name
     LIKE 'N%'
     COLLATE Latin1_General_CS_AS
