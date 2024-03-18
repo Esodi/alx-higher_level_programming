@@ -19,7 +19,7 @@ def list_Name(username, password, dbname, state_name):
             db=dbname
             )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = %s", (state_name,))
+    cur.execute("SELECT * FROM states WHERE name = {}".format(state_name,))
     fetch = cur.fetchall()
     for i in fetch:
         print(f'{i}')
