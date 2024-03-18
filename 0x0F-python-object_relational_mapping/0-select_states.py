@@ -22,7 +22,7 @@ def list_states(mysql_username, mysql_password, database_name):
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     states = cur.fetchall()
     for i in states:
-        print('({}, {})'.format(i[0], i[1]))
+        print('{}'.format(i))
     cur.close()
     db.close()
 
