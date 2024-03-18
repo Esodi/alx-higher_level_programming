@@ -29,7 +29,7 @@ def list_Ns(username, password, dbname):
     cur.execute(sql)
     fetchedNs = cur.fetchall()
     for i in fetchedNs:
-        print(f'{i}')
+        print('{}'.format(i))
     cur.close()
     db.close()
 
