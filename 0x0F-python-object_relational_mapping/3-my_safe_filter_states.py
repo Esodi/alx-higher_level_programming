@@ -19,11 +19,11 @@ def list_Name(username, password, dbname, state_name):
             db=dbname
             )
     cur = db.cursor()
-    sql = "SELECT *FROM states WHERE name = %s"
+    sql = "SELECT * FROM states WHERE name = '{}'".format("%s")
     cur.execute(sql, (state_name,))
     fetch = cur.fetchall()
     for i in fetch:
-        print('({}, {})'.format(i[0], i[1]))
+        print('{}'.format(i))
     cur.close()
     db.close()
 
