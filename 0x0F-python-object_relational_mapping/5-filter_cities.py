@@ -20,14 +20,14 @@ def allcitiesv2(username, password, dbname, state_name):
             )
     cur = db.cursor()
     sql = (
-    "SELECT cities.name "
-    "FROM cities "
-    "INNER JOIN states "
-    "ON cities.state_id = states.id "
-    "WHERE states.name = {} ".format("%s") +
-    "ORDER BY cities.id "
-    "ASC"
-    )
+            "SELECT cities.name "
+            "FROM cities "
+            "INNER JOIN states "
+            "ON cities.state_id = states.id "
+            "WHERE states.name = {} ".format("%s") +
+            "ORDER BY cities.id "
+            "ASC"
+            )
     cur.execute(sql, (state_name,))
     fetch = cur.fetchall()
     lst = list(i[0] for i in fetch)
