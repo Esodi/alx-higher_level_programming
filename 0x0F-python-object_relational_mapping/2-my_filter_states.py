@@ -19,7 +19,12 @@ def list_Name(username, password, dbname, state_name):
             db=dbname
             )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}' COLLATE utf8mb4_bin".format(state_name,))
+    cur.execute(
+            "SELECT * "
+            "FROM states "
+            "WHERE name = '{}' "
+            "COLLATE utf8mb4_bin".format(state_name,)
+            )
     fetch = cur.fetchall()
     for i in fetch:
         print('{}'.format(i))
