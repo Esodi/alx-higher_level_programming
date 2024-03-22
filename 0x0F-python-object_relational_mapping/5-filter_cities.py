@@ -30,13 +30,14 @@ def allcitiesv2(username, password, dbname, state_name):
     )
     cur.execute(sql, (state_name,))
     fetch = cur.fetchall()
-    for i in range(len(fetch) - 1):
-        print('{}, '.format(fetch[i][0]), end='')
-    if len(fetch) > 0:
-        print('{}'.format(fetch[-1][0]))
+    lst = list(i[0] for i in fetch)
+    print(*lst, sep=', ')
     cur.close()
     db.close()
 
 
 if __name__ == '__main__':
-    allcitiesv2(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    try:
+        allcitiesv2(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    except IndexError e:
+        print(e)
