@@ -39,5 +39,5 @@ def allcitiesv2(username, password, dbname, state_name):
 if __name__ == '__main__':
     try:
         allcitiesv2(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
-    except IndexError e:
-        print(e)
+    except IndexError:
+        print("out of range")
